@@ -1,0 +1,32 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+jdk:
+  - openjdk8
+
+env:
+  global:
+    - secure: ""
+    - # ^^ DOCKER_USERNAME
+    - secure: ""
+    - # ^^ DOCKER_PASSWORD
+
+install:
+  - mvn install -Dmaven.javadoc.skip=true
+
+after_success:
+  docker build -t netshoes/sample-sleuth-notification:latest -t netshoes/sample-sleuth-notification:1.0-SNAPSHOT .
+
+deploy:
+  provider: script
+  script: bash src/main/bash/docker_push.sh
+  on:
+    branch: master
+
+cache:
+  directories:
+    - ~/.m2/repository

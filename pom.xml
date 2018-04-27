@@ -67,6 +67,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>sample-sleuth-notification</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
