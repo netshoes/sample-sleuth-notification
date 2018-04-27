@@ -1,5 +1,5 @@
 # Sample for Spring Cloud Sleuth - Notification Microservice
-Simple project to show how spring-cloud-sleuth works with RabbitMQ
+Simple project to show how spring-cloud-sleuth works.
 
 # Running
 ## Zipkin
