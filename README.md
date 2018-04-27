@@ -9,7 +9,14 @@ docker run -d --name openzipkin-2.7.3 -p 9411:9411 openzipkin/zipkin:2.7.3
 ```
 
 ## Application
+### From source code
 ```mvn spring-boot:run```
+
+### From Docker
+``` 
+docker pull netshoes/sample-sleuth-notification
+docker run -d --name sample-sleuth-notification -p 8081:8081 netshoes/sample-sleuth-notification
+```
 
 # Available APIs
 ## Send notification (Mocked)
