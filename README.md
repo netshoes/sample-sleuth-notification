@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/netshoes/sample-sleuth-notification.svg?branch=master)](https://travis-ci.org/netshoes/sample-sleuth-notification)
+
 # Sample for Spring Cloud Sleuth - Notification Microservice
 Simple project to show how spring-cloud-sleuth works.
 
