@@ -2,15 +2,11 @@
 Simple project to show how spring-cloud-sleuth works with RabbitMQ
 
 # Running
-## RabbitMQ
-### With Docker
+## Zipkin
 ```
-docker pull rabbitmq:3.7.4-management
-docker run -d --name rabbitmq-3.7.4 -p 5672:5672 -p 15672:15672 rabbitmq:3.7.4-management
+docker pull openzipkin/zipkin:2.7.3
+docker run -d --name openzipkin-2.7.3 -p 9411:9411 openzipkin/zipkin:2.7.3
 ```
-* Management console: http://localhost:15672
-* Username: guest
-* Password: guest
 
 ## Application
 ```mvn spring-boot:run```
