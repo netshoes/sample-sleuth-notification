@@ -4,10 +4,13 @@
 Simple project to show how spring-cloud-sleuth works.
 
 # Running
-## Zipkin
+## Dependencies
+First you must install and run the dependencies.
+
+### Zipkin
 ```
 docker pull openzipkin/zipkin:2.7.3
-docker run -d --name openzipkin-2.7.3 -p 9411:9411 openzipkin/zipkin:2.7.3
+docker run -d -p 9411:9411 --name openzipkin-2.7.3 openzipkin/zipkin:2.7.3
 ```
 
 ## Application
@@ -17,7 +20,7 @@ docker run -d --name openzipkin-2.7.3 -p 9411:9411 openzipkin/zipkin:2.7.3
 ### From Docker
 ``` 
 docker pull netshoes/sample-sleuth-notification
-docker run -d --name sample-sleuth-notification -p 8081:8081 netshoes/sample-sleuth-notification
+docker run -d  -p 8081:8081 -e ZIPKIN_ADDRESS='http://localhost:9411' --name sample-sleuth-notification netshoes/sample-sleuth-notification
 ```
 
 # Available APIs
